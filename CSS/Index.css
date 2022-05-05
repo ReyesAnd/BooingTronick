@@ -1,0 +1,367 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: Verdana;
+	box-sizing:border-box;
+}
+
+body{
+	background: url(../Imagenes/fondo.jpg);
+	background-repeat: no-repeat; background-attachment: fixed; 
+	background-size: 100% 100%; background-position: center center;	
+}
+
+	body h1{
+		color: #268A00;
+		font-size: 70px;
+	}
+
+	body h2{
+		color: white;
+		font-size: 20px;
+		font-style: italic;
+	}
+
+	body h1, h2{
+		position: relative; left: 31%; bottom: 140px;
+		display: inline-block;
+	}
+
+
+.social {
+	position: fixed; /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
+	left: 0; /* Establecemos la barra en la izquierda */
+	top: 200px; /* Bajamos la barra 200px de arriba a abajo */
+	z-index: 2000; /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
+}
+ 
+	.social ul {
+		list-style: none;
+	}
+ 
+	.social ul li a {
+		display: inline-block;
+		color:#fff;
+		background: #000;
+		padding: 10px 15px;
+		text-decoration: none;
+		-webkit-transition:all 500ms ease;
+		-o-transition:all 500ms ease;
+		transition:all 500ms ease; /* Establecemos una transición a todas las propiedades */
+	}
+ 
+	.social ul li a:hover {
+		background: #268A00; /* Cambiamos el fondo cuando el usuario pase el mouse */
+		padding: 10px 30px; /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
+		border-radius: 10%;	
+	}
+
+.logo{ /*Estilo del logo*/
+	background: black;
+	width: 100%;
+	height: 150px;
+	text-decoration: none;
+}
+
+	.logo img{ /*Estilo del logo*/
+		float: left;
+		width: 10%;
+		position: relative; top: 10px; left: 20%; 
+	}
+
+.logo{
+	text-decoration: none;
+}	
+
+.menu{
+	width: 80%;
+	height: 50px;
+	background-color: #268A00;
+	position: relative; bottom: 50px; left: 11%;
+	border-radius: 10px;
+	padding-top: 10px; 
+	text-align: center;
+}
+
+	.menu li{
+		display: inline;
+		font-size: 20px;
+		font-weight: bold;
+	}
+
+	.menu li a{
+		color: #FFFFFF;
+		padding: 15px;
+		text-decoration: none;
+	}
+
+	.menu li a:hover{
+		background: black; /* Cambiamos el fondo cuando el usuario pase el mouse */
+		font-size: 25px;
+		border-radius: 10%;
+		-webkit-transition:all 500ms ease;
+		-o-transition:all 500ms ease;
+		transition:all 500ms ease; /* Establecemos una transición a todas las propiedades */
+	}
+
+.pie{
+	background: #268A00;
+	width: 100%;
+	height: 80px;
+	text-align: center;
+	margin-top: 30px;
+}
+
+	.pie p{
+		position: relative; top: 30%;
+	}
+
+/*------------------------------- Inicio ---------------------------------------------*/
+
+.introduccion{
+	background: rgba(243, 243, 243, 0.5);
+	border-radius: 10px;
+	width: 80%;
+	height: 1400px;
+	position: relative; left: 11%;
+	padding: 30px;
+	padding-top: 60px;
+	text-align: justify;
+}
+
+	.introduccion h3{
+		color: #268A00;
+	}
+
+.video{
+	position: relative; left: 18%; top: 30px;
+}	
+
+	.titulo td{
+		width: 50%;
+		height: 40px;
+		text-align: center;
+		border-radius: 5px;
+		background: #000;
+		position: relative; left: 54%; top: 70px;
+		padding: 5px;
+	}
+
+	.tabla{
+		border: 3px solid black;
+		border-radius: 5px;
+		background: rgba(0, 0, 0, 0.3);
+		position: relative; top: 70px; left: 6.5%;
+		padding: 10px;
+		width: 5%;
+	}
+
+		.tabla h3{
+			color: #FFFFFF;
+		}
+
+		.tabla tr{
+			padding: 10px;
+			text-align: center;
+		}
+
+		.tabla img{
+			margin: 10px;
+			height: 300px;
+			border-radius: 5px;
+		}
+
+		.descripcion p{
+			padding: 15px;
+			text-align: justify;
+		}		
+
+/*------------------------------- Quienes Somos --------------------------------------*/
+
+.texto{
+	background: rgba(243, 243, 243, 0.5);
+	border-radius: 10px;
+	width: 80%;
+	position: relative; left: 11%;
+	padding: 30px;
+	padding-top: 60px;
+	text-align: justify;
+}
+
+	.texto h3{
+		color: #268A00;
+		text-align: center;
+	}
+
+	.texto li{
+		display: inline;
+		margin: 3%;
+		position: relative; left: 11%;
+	}
+
+.electronica{
+	width: 50%;
+	position: relative; left: 27%; bottom: 25px;
+	border-radius: 5px;
+}	
+
+.banner{
+	width: 200px;
+	height: 100px;
+	border: 1px solid white;
+	border-radius: 5px;
+	position: fixed;
+	right: 0;
+	top: 10px;
+	z-index: 2000;
+	background-size: 100%;
+	animation: banner 10s infinite;
+	animation-direction: alternate;
+}
+
+@keyframes banner{
+	0%, 30%{
+		background-image: url(../Imagenes/led.jpg);
+		background-size: 100% 100%;
+		opacity: 1;
+	}
+
+	31%, 34%{
+		opacity: 0.1;
+	}
+
+	35%, 65%{
+		background-image: url(../Imagenes/inversor.jpg);
+		background-size: 100% 100%;
+		opacity: 1;
+	}
+
+	66%, 69%{
+		opacity: 0.1;
+	}
+
+	70%, 100%{
+		background-image: url(../Imagenes/tech.jpg);
+		background-size: 100%;
+		opacity: 1;
+	}
+}
+
+/*---------------------------------- Nuestros Servicios --------------------------------*/
+
+.cuerpoServicios{
+	background: rgba(243, 243, 243, 0.5);
+	border-radius: 10px;
+	width: 80%;
+	height: 850px;
+	position: relative; left: 11%; top: 10px;
+	padding: 30px;
+	padding-top: 60px;
+}
+
+.servicios{
+	background: #000;
+	border-radius: 5px;
+	color: #268A00;
+	width: 40%;
+	height: 40px;
+	text-align: center;
+	position: relative; left: 30%;
+}
+
+.galeria{
+	border: 1px solid black;
+	border-radius: 5px;
+	position: relative; top: 30px; left: 2%;
+	width: 10%;
+	background: rgba(0, 0, 0, 0.3);
+	text-align: center;
+	padding: 10px;
+}
+
+.imagen{
+	border-radius: 5px;
+}
+
+	.imagen:hover {
+		height: 250px;
+		-webkit-transition:all 500ms ease;
+		-o-transition:all 500ms ease;
+		transition:all 500ms ease;
+		filter: brightness(80%)
+	}
+
+.desc{
+	text-align: center;
+	padding: 10px;
+}	
+
+/*---------------------------------- Contactanos ---------------------------------------*/
+
+.formularioregistro{
+
+	width: 500px;
+	background: rgba(243, 243, 243, 0.5);
+	padding: 30px;
+	margin: auto;
+	margin-top: 30px;
+	border-radius: 4px;
+	color: #000000;
+	box-shadow: 0px 0px 40px #268A00;
+}
+
+.formularioregistro h3{
+
+	font-size: 25px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.formularioregistro p{
+
+	height: 40px;
+	text-align: center;
+	font-size: 18px;
+	line-height: 40px;
+}
+
+.formularioregistro a{
+
+	color:#fff;
+	text-decoration: none;
+}
+
+.formularioregistro a:hover{
+
+	color:#fff;
+	text-decoration: underline;
+	
+}
+
+.grupoinput{
+
+	width:270%
+	background: #5BBAAA;
+	padding: 13px;
+	border-radius: 4px;
+	margin-bottom: 16px;
+	border: 1px solid #fff;
+	font-size: 17px;
+	margin-left: 110px;
+}
+
+.formularioregistro .boton{
+
+	width:100%;
+	background: #268A00;
+	border:none;
+	padding: 12px;
+	color:#fff;
+	margin: 16px 0px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.cuerpocheckbox{
+	position: relative; left:10%; top: 30px;
+}
